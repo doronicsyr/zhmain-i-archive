@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>500彩票网 · 熟悉的页面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      background: linear-gradient(145deg, #fbe9d7 0%, #f7cbb5 55%, #e4a587 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+      color: #2e241e;
+    }
+
+    .card {
+      max-width: 820px;
+      width: 100%;
+      background: rgba(255, 251, 245, 0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 48px 48px 40px 40px;
+      box-shadow: 0 20px 40px -12px rgba(140, 70, 40, 0.35),
+                  0 4px 18px rgba(200, 130, 90, 0.15);
+      padding: 2.8rem 2.5rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    @media (max-width: 540px) {
+      .card {
+        padding: 2rem 1.5rem;
+        border-radius: 32px;
+      }
+    }
+
+    /* 温柔叙事引子 */
+    .opening {
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+      border-left: 4px solid #d4936c;
+      padding-left: 1.25rem;
+      margin-bottom: 1.75rem;
+      color: #4a352b;
+      font-weight: 380;
+    }
+
+    .opening strong {
+      font-weight: 520;
+      color: #7f5037;
+    }
+
+    .main-heading {
+      font-size: 2rem;
+      font-weight: 460;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin: 0.75rem 0 1.25rem 0;
+      color: #2c1d14;
+    }
+
+    .main-heading span {
+      background: linear-gradient(to right, #a66b4b, #b87a59);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 520;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      color: #3f2e25;
+      margin: 1.5rem 0 2rem 0;
+    }
+
+    .intro-text a {
+      color: #854f33;
+      text-decoration: none;
+      font-weight: 480;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.25s, background 0.2s;
+      padding: 0 0.1rem;
+      border-radius: 4px;
+    }
+
+    .intro-text a:hover {
+      border-bottom-color: #b57a5a;
+      background: #f3e1d4;
+    }
+
+    /* 特点卡片区 —— 故事中自然带出 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2.2rem 0 1.8rem 0;
+    }
+
+    .feature-item {
+      flex: 1 1 180px;
+      background: #fdf6ef;
+      padding: 1.2rem 1rem 1rem 1.2rem;
+      border-radius: 28px;
+      box-shadow: inset 0 0 0 1px rgba(230, 190, 170, 0.3), 0 6px 12px -8px rgba(120, 60, 30, 0.18);
+      transition: transform 0.15s ease, background 0.2s;
+    }
+
+    .feature-item:hover {
+      background: #fcf0e3;
+      transform: scale(0.98);
+    }
+
+    .feature-item h3 {
+      font-weight: 470;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+      color: #4f3423;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .feature-item h3::before {
+      content: "·";
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #bf8666;
+      margin-right: 0.15rem;
+      line-height: 1;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #4c3a2f;
+      margin-top: 0.2rem;
+    }
+
+    /* 温和的延续段落 */
+    .continuation {
+      background: #f3e5da;
+      padding: 1.25rem 1.5rem;
+      border-radius: 32px;
+      margin: 2rem 0 1.8rem 0;
+      color: #2f221b;
+      font-size: 1rem;
+      border: 1px solid #ebd3c0;
+    }
+
+    .continuation strong {
+      font-weight: 520;
+      color: #7a4e36;
+    }
+
+    .faq-note {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin: 2.2rem 0 0.6rem 0;
+      border-top: 2px dashed #dbbca9;
+      padding-top: 1.5rem;
+    }
+
+    .faq-note-item {
+      flex: 1 1 160px;
+    }
+
+    .faq-note-item span {
+      display: block;
+      font-weight: 380;
+      font-size: 0.9rem;
+      color: #6b4e3b;
+      letter-spacing: 0.2px;
+      margin-bottom: 0.1rem;
+    }
+
+    .faq-note-item .q {
+      font-weight: 460;
+      color: #4e3222;
+    }
+
+    .subtle-end {
+      margin-top: 2.6rem;
+      text-align: right;
+      font-size: 0.95rem;
+      color: #705648;
+      border-top: 1px solid #dec9ba;
+      padding-top: 1.6rem;
+      letter-spacing: 0.02em;
+    }
+
+    .subtle-end a {
+      color: #6b4530;
+      text-decoration: none;
+      border-bottom: 2px solid #cba78c;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .subtle-end a:hover {
+      color: #3a271e;
+      border-bottom-color: #8f644b;
+    }
+
+    /* 辅助 */
+    .small-meta {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <!-- 开场短句 —— 像一次安静的重访 -->
+  <div class="opening">
+    <strong>再次打开</strong> 这个页面，像翻开一本折了角的笔记本。<br>
+    有些角落还留着上一次的温度。
+  </div>
+
+  <!-- 标题 —— 收藏夹里熟悉的标记 -->
+  <h1 class="main-heading">
+    你收藏的 <span>500彩票网</span>
+  </h1>
+
+  <!-- 承接段落：从收藏与持续关注的自然叙述 -->
+  <div class="intro-text">
+    收藏它的时候，大概是个寻常的下午。后来每次点开，界面还是那种让人安心的简洁 —— 没有铺天盖地的广告，没有催促的弹窗。你也许和我一样，只是偶尔过来看一眼，看看熟悉的页面有没有什么细微变化。 
+    <a href="https://official-web-500.com">500彩票网</a> 就静静待在你的书签栏里，不需要特意想起，也从未真正忘记。
+  </div>
+
+  <!-- 特点列表：不是罗列，而是安静的陪伴感 -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <h3>轻量与稳定</h3>
+      <p>每次加载都很迅速，没有多余的重定向；版式始终清晰，不因频繁改版而迷失。</p>
+    </div>
+    <div class="feature-item">
+      <h3>延续的熟悉感</h3>
+      <p>从导航到内容区块，保持着一致的气质，让你不用重新适应，像见一位老邻居。</p>
+    </div>
+    <div class="feature-item">
+      <h3>克制的信息</h3>
+      <p>没有夸张的横幅或诱导性通知，呈现必要的资讯，把选择权留给你。</p>
+    </div>
+  </div>
+
+  <!-- 场景化提示：温和的“再次回来” -->
+  <div class="continuation">
+    <strong>☕ 收藏夹里的坐标</strong><br>
+    某个周末，清理书签时又看到它。点开，页面还是那个熟悉的入口，没有强行让你注册，没有冗余的弹层。你想，就这样留着吧 —— 也许明天会再打开，也许下个月。但知道它还在那里，而且不吵不闹，就已经足够。
+  </div>
+
+  <!-- FAQ 摘要风格，结合再次访问场景 -->
+  <div class="faq-note">
+    <div class="faq-note-item">
+      <span class="q">“为什么每次打开都差不多？”</span>
+      <span>保持一致性，反而是一种可贵的体验。没有突如其来的改版，减少困惑。</span>
+    </div>
+    <div class="faq-note-item">
+      <span class="q">“收藏了很久，安全吗？”</span>
+      <span>日常浏览中，一个风格稳定的网站往往更值得信任，前提是留意域名与链接习惯。</span>
+    </div>
+    <div class="faq-note-item">
+      <span class="q">“还会继续更新吗？”</span>
+      <span>据长期观察，内容与结构始终在微调，但温和的调性从未改变。</span>
+    </div>
+  </div>
+
+  <!-- 温和结尾：不催促，只叙述 -->
+  <div class="subtle-end">
+    也许某天你又会点开它 —— 毕竟有些页面，适合放在收藏夹的角落，<br>
+    和熟悉的旧书放在一起。<br>
+    <a href="https://official-web-500.com">500彩票网</a> · 不必刻意想起，却时常遇见。
+  </div>
+</div>
+
+</body>
+</html>
