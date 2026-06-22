@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>500彩票网 – 站点介绍与可信说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(145deg, #fde9da 0%, #f9d4b0 50%, #f5c09a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 28px 18px 50px;
+            line-height: 1.6;
+            color: #2e221b;
+        }
+
+        .card {
+            max-width: 820px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 48px 48px 32px 32px;
+            box-shadow: 0 20px 40px -10px rgba(150, 90, 50, 0.25), 0 8px 18px rgba(120, 70, 40, 0.10);
+            padding: 40px 32px 38px;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #b66a3b, #8d4e2a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #6f4c37;
+            background: #f2e1d3;
+            display: inline-block;
+            padding: 4px 20px;
+            border-radius: 40px;
+            letter-spacing: 0.01em;
+            backdrop-filter: blur(2px);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #5a3b2a;
+            margin: 32px 0 12px 0;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #e9c6ae;
+            display: inline-block;
+        }
+
+        .desc {
+            margin: 14px 0 20px;
+            font-size: 1rem;
+            color: #3d2c21;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 20px;
+            margin: 18px 0 22px;
+        }
+
+        .feature-item {
+            background: #faf3ec;
+            border-radius: 28px;
+            padding: 14px 20px;
+            flex: 1 1 160px;
+            min-width: 130px;
+            box-shadow: 0 2px 6px rgba(110, 65, 35, 0.06);
+            transition: background 0.15s, transform 0.1s;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1.05rem;
+            color: #8f522e;
+            margin-bottom: 4px;
+        }
+
+        .feature-item span {
+            font-size: 0.92rem;
+            color: #544036;
+        }
+
+        .use-tip {
+            background: #f7ede4;
+            border-radius: 30px;
+            padding: 18px 22px;
+            margin: 22px 0 18px;
+            border-left: 6px solid #c5865b;
+        }
+
+        .use-tip p {
+            margin: 6px 0;
+        }
+
+        .faq-mini {
+            margin: 28px 0 18px;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #603d28;
+            margin-top: 14px;
+            margin-bottom: 4px;
+        }
+
+        .faq-a {
+            color: #3d2c21;
+            padding-left: 6px;
+            border-left: 3px solid #dbb49a;
+            padding-left: 12px;
+            margin-bottom: 6px;
+        }
+
+        .link-sentence {
+            background: #e7d4c5;
+            border-radius: 50px;
+            padding: 16px 24px;
+            margin: 28px 0 8px;
+            text-align: center;
+            font-size: 1.04rem;
+            color: #35261d;
+        }
+
+        .link-sentence a {
+            color: #6a3f24;
+            background: #ffffffdd;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            box-shadow: 0 2px 6px rgba(100, 60, 30, 0.10);
+            display: inline-block;
+            margin: 0 4px;
+        }
+
+        .link-sentence a:hover {
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(100, 60, 30, 0.20);
+            transform: translateY(-1px);
+        }
+
+        .note {
+            font-size: 0.88rem;
+            color: #655047;
+            background: #ede0d6;
+            border-radius: 28px;
+            padding: 12px 18px;
+            margin-top: 24px;
+            text-align: center;
+            border: 1px dashed #c3a086;
+        }
+
+        .footer-meta {
+            margin-top: 34px;
+            font-size: 0.82rem;
+            color: #7b604f;
+            text-align: right;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                padding: 28px 18px 30px;
+                border-radius: 32px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .feature-item {
+                flex: 1 1 100%;
+            }
+
+            .link-sentence {
+                padding: 14px 16px;
+                font-size: 0.98rem;
+            }
+
+            .link-sentence a {
+                padding: 5px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>500彩票网 · 产品说明</h1>
+        <div class="sub">站点介绍 · 亮点 · 使用建议</div>
+    </div>
+
+    <!-- 摘要 -->
+    <div class="section-title">📄 站点摘要</div>
+    <div class="desc">
+        <strong>500彩票网</strong> 是一个长期运营的线上服务平台，聚焦于数字型、竞技型彩票资讯与彩种信息展示。网站提供各彩种的开奖结果、历史走势、玩法介绍以及部分互动功能。平台本身以信息聚合与工具属性为主，帮助用户快速了解彩市动态。
+    </div>
+
+    <!-- 亮点卡片 -->
+    <div class="section-title">✨ 功能亮点</div>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <strong>📊 数据图表</strong>
+            <span>开奖号码、冷热分布、走势图，信息一目了然。</span>
+        </div>
+        <div class="feature-item">
+            <strong>📋 玩法说明</strong>
+            <span>常见彩种规则、术语解释，降低新手理解门槛。</span>
+        </div>
+        <div class="feature-item">
+            <strong>🔔 动态更新</strong>
+            <span>开奖结果、奖池信息保持相对及时的刷新。</span>
+        </div>
+        <div class="feature-item">
+            <strong>⚙️ 工具集成</strong>
+            <span>复式计算、胆拖筛选、奖金试算等辅助功能。</span>
+        </div>
+    </div>
+
+    <!-- 使用建议 -->
+    <div class="section-title">🧭 使用建议</div>
+    <div class="use-tip">
+        <p>• 建议将 <a href="https://m-wap-500.com" style="color:#7a462c; font-weight:600; text-decoration:underline;">500彩票网</a> 作为信息参考工具，而非决策依据。</p>
+        <p>• 使用前可先浏览“玩法说明”和“常见问题”，以准确理解各彩种规则。</p>
+        <p>• 数据存在自然延迟，重要开奖结果建议多方核对。</p>
+        <p>• 合理分配精力，避免过度投入时间与资金。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="section-title">❓ 常见疑问摘要</div>
+    <div class="faq-mini">
+        <div class="faq-q">该平台是否直接销售彩票？</div>
+        <div class="faq-a">网站主要提供信息展示与数据工具，不直接进行出票或销售。具体业务模式请参考站内说明。</div>
+
+        <div class="faq-q">开奖数据来源是否可靠？</div>
+        <div class="faq-a">网站声称数据取自官方发布渠道，但用户仍应以官方机构公布为准。建议交叉验证。</div>
+
+        <div class="faq-q">是否需要注册才能使用？</div>
+        <div class="faq-a">大部分资讯、走势图、开奖结果可直接浏览，部分互动功能可能需要注册账号。</div>
+    </div>
+
+    <!-- 嵌入链接的句子 (自然) -->
+    <div class="link-sentence">
+        📌 若想了解更多彩种走势与玩法说明，可前往
+        <a href="https://m-wap-500.com">500彩票网</a>
+        自行查阅相关信息。
+    </div>
+
+    <!-- 可信且克制的说明 -->
+    <div class="note">
+        ⚠️ 本页面为客观介绍，不构成任何购彩建议。彩票存在风险，请理性对待，量力而行。
+        <br>所有信息仅供参考，具体以各彩票发行机构官方公告为准。
+    </div>
+
+    <div class="footer-meta">
+        介绍页 · 内容整理于近期 · 方向偏重可信说明
+    </div>
+</div>
+</body>
+</html>
